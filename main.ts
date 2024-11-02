@@ -5,6 +5,13 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 let number = 0
 radio.setGroup(100)
+basic.showLeds(`
+    . . # . .
+    . . . # .
+    # # # # #
+    # . . . #
+    # # # # #
+    `)
 basic.forever(function () {
     while (input.buttonIsPressed(Button.AB)) {
         radio.sendNumber(0)
